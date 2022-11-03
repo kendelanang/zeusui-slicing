@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-nav {
+  gap: 10px;
+}
+
+.navbar-collapse {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+._hero {
+  height: 100vh;
+}
+
+._herobackground {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  height: 574px;
+}
+
+._background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+._herocontent {
+  position: absolute;
+  width: 854px;
+  height: fit-content;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 80px auto;
+  z-index: 150;
+}
+
+._herocontent h1 {
+  color: black;
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  text-align: center;
+  padding: 0 0 32px;
+  text-shadow: -3px 3px white;
+}
+
+._herocontent p {
+  font-family: 'Space Grotesk';
+  font-weight: 400;
+  font-size: 16px;
+  color: #532C59;
+  padding: 0 0 32px;
+}
+
+button {
+  border: none;
+  border-radius: 15px !important;
+  background-color: #532C59;
   color: white;
+  align-items: center;
+  padding: 16px 20px;
+  font-family: 'Syne' !important;
+  font-weight: 700;
+  font-size: 16px !important;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+._backgroundcontainer {
+  position: absolute;
+  margin: 0 auto;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+._bg1 {
+  margin: 0 53px;
+}
+
+._bg2 {
+  right: 0;
+  bottom: 0;
+  margin: 0 32px 0 0;
+}
+
+._bg3 {
+  left: -16px;
+  bottom: 0;
+}
+
+._bg4 {
+  right: 0;
+  top: 0;
+  margin: 30px 167px 0 0;
+}
+
+/* ================= Media Queries (Medium Devices) ===================== */
+@media screen and (max-width: 1024px) {
+  ._herocontent {
+    position: absolute;
+    width: 85%;
+    height: fit-content;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 80px auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  ._herocontent h1 {
+    color: black;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+    padding: 0 0 32px;
+    text-shadow: -3px 3px white;
+  }
+
+  ._herocontent p {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 16px;
+    color: #532C59;
+    padding: 0 0 32px;
+  }
+
+  ._bg1 {
+    left: 0;
+    margin: 0 0 0 -70px;
+    
+  }
+  
+  ._bg2 {
+    right: -100px;
+  }
+  
+  ._bg3 {
+    left: 0;
+    bottom: 0;
+    margin: 0 0 0 -200px;
+  }
+  
+  ._bg4 {
+    right: -20px;
+    top: 0;
+    margin: 0 0 0 0;
+  }
+}
+
+/* ================= Media Queries (Small Devices) ===================== */
+@media screen and (max-width: 600px) {
+  ._herocontent {
+    position: absolute;
+    width: 70%;
+    height: fit-content;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 80px auto;
   }
 }
