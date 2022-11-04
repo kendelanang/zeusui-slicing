@@ -5,7 +5,7 @@ import logozeus from '../assets/Logo.svg'
 
 const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" className='bg-white border-bottom'>
+        <Navbar collapseOnSelect expand="lg" className='bg-white'>
             <Container fluid>
                 <Navbar.Brand href="#home"><img src={logozeus} alt="React Bootstrap logo" /></Navbar.Brand>
                 <Navbar.Toggle />

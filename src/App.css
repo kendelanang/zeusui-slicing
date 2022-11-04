@@ -11,6 +11,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   color: #000000;
+  border-bottom: 1px solid #F8E0FB;
 }
 
 .navbar-brand {
@@ -36,7 +37,7 @@ body {
 ._herobackground {
   display: flex;
   width: 100%;
-  height: 574px;
+  height: 85vh;
 }
 
 ._background {
@@ -50,11 +51,10 @@ body {
 ._herocontent {
   position: absolute;
   width: 854px;
-  height: fit-content;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  margin: 80px auto;
+  margin: 150px auto;
   z-index: 150;
 }
 
@@ -66,7 +66,7 @@ body {
   font-size: 80px;
   text-align: center;
   padding: 0 0 32px;
-  text-shadow: -3px 3px white;
+  text-shadow: -4px 4px white;
 }
 
 ._herocontent p {
@@ -120,8 +120,30 @@ button {
   margin: 30px 167px 0 0;
 }
 
+._sponsored {
+  display: flex;
+  height: 15vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+._logo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
 /* ================= Media Queries (Medium Devices) ===================== */
 @media screen and (max-width: 1024px) {
+  ._herobackground {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+  }
+
   ._herocontent {
     position: absolute;
     width: 85%;
@@ -129,7 +151,7 @@ button {
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    margin: 80px auto;
+    margin: 150px auto;
   }
 
   ._herocontent h1 {
@@ -154,35 +176,173 @@ button {
   ._bg1 {
     left: 0;
     margin: 0 0 0 -70px;
-    
+
   }
-  
+
   ._bg2 {
     right: -100px;
   }
-  
+
   ._bg3 {
     left: 0;
     bottom: 0;
     margin: 0 0 0 -200px;
   }
-  
+
   ._bg4 {
     right: -20px;
     top: 0;
     margin: 0 0 0 0;
   }
+
+  ._sponsored {
+    display: flex;
+    height: 25vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ._logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    grid-gap: 10px 40px;
+  }
 }
 
 /* ================= Media Queries (Small Devices) ===================== */
 @media screen and (max-width: 600px) {
+  ._herobackground {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+  }
+
   ._herocontent {
     position: absolute;
-    width: 70%;
+    width: 90%;
     height: fit-content;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
     margin: 80px auto;
+  }
+
+  ._herocontent h1 {
+    color: black;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    padding: 0 0 32px;
+    text-shadow: -3px 3px white;
+  }
+
+  ._herocontent p {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 16px;
+    color: #532C59;
+    padding: 0 0 32px;
+  }
+
+  ._sponsored {
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ._logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    object-fit: cover;
+    overflow: hidden;
+    grid-gap: 10px 40px;
+  }
+
+  ._logo>img {
+    width: 90px;
+  }
+}
+
+/* ================= Media Queries ( Very Small Devices) ===================== */
+@media screen and (max-width: 320px) {
+  ._herobackground {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+  }
+
+  ._herocontent {
+    position: absolute;
+    width: 90%;
+    height: fit-content;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px auto;
+  }
+
+  ._herocontent h1 {
+    color: black;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    padding: 0 0 15px;
+    text-shadow: -3px 3px white;
+  }
+
+  ._herocontent p {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 12px;
+    color: #532C59;
+    padding: 0 0 15px;
+  }
+
+  ._sponsored {
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ._logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  ._logo>img {
+    width: 90px;
+  }
+
+  button {
+    border: none;
+    border-radius: 15px !important;
+    background-color: #532C59;
+    color: white;
+    align-items: center;
+    padding: 16px 20px;
+    font-family: 'Syne' !important;
+    font-weight: 700;
+    font-size: 12px !important;
+    display: inline-block;
   }
 }
