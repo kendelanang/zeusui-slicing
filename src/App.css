@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
 body {
   font-family: 'Space Grotesk', sans-serif;
@@ -136,6 +136,96 @@ button {
   gap: 40px;
 }
 
+h1 {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 48px;
+  align-self: stretch;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  font-family: 'Space Grotesk';
+  font-weight: 400;
+  font-size: 16px;
+  color: #532C59;
+  padding: 0 0 16px;
+}
+
+section {
+  margin: 80px 70px 0 70px;
+  text-align: center;
+}
+
+._collectionscontainer {
+  position: relative;
+  text-align: center;
+  width: 820px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 64px;
+}
+
+._teamcontainer {
+  position: relative;
+  text-align: center;
+  width: 820px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 64px;
+}
+
+._cardcontainer {
+  position: relative;
+}
+
+.card-title {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600 !important;
+}
+
+._cardteamcontainer .card-title {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+._cardteamcontainer p {
+  text-align: center;
+  justify-content: center;
+}
+
+._cardteamcontainer img {
+  height: 80px;
+}
+
+._providecontainer {
+  position: relative;
+  text-align: center;
+  width: 820px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 64px;
+}
+
+._cardprovidecontainer .card-title {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+._cardprovidecontainer p {
+  text-align: center;
+  justify-content: center;
+}
+
+._cardprovidecontainer img {
+  height: 40px;
+}
+
 /* ================= Media Queries (Medium Devices) ===================== */
 @media screen and (max-width: 1024px) {
   ._herobackground {
@@ -211,6 +301,49 @@ button {
     height: fit-content;
     grid-gap: 10px 40px;
   }
+
+  ._collectionscontainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 64px;
+  }
+
+  ._teamcontainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 64px;
+  }
+
+  ._providecontainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 64px;
+  }
+
+  ._cardcontainer img {
+    object-fit: cover;
+    height: 350px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  ._cardteamcontainer .card-title {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+  }
 }
 
 /* ================= Media Queries (Small Devices) ===================== */
@@ -272,6 +405,15 @@ button {
   ._logo>img {
     width: 90px;
   }
+
+  ._collectionscontainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 64px;
+  }
 }
 
 /* ================= Media Queries ( Very Small Devices) ===================== */
@@ -330,7 +472,7 @@ button {
   }
 
   ._logo>img {
-    width: 90px;
+    width: 70px;
   }
 
   button {
@@ -344,5 +486,27 @@ button {
     font-weight: 700;
     font-size: 12px !important;
     display: inline-block;
+  }
+
+  ._bg1 {
+    left: 0;
+    margin: -20px 0 0 -80px;
+
+  }
+
+  ._bg2 {
+    right: -170px;
+  }
+
+  ._bg3 {
+    left: 0;
+    bottom: 0;
+    margin: 0 0 0 -200px;
+  }
+
+  ._bg4 {
+    right: -50px;
+    top: 0;
+    margin: 0 0 0 0;
   }
 }
